@@ -1,0 +1,79 @@
+
+body {
+  background-color: #fac904; 
+}
+
+.card {
+  margin-top: 20px;
+  border: 2px solid #000000; 
+  border-radius: 15px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out; 
+  position: relative;
+}
+
+.card:hover {
+  transform: scale(1.05); 
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.error {
+  color: red;
+}
+
+.weather-icon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 15px;
+  position: absolute;
+  animation: flyingIcon 5s infinite alternate; /
+}
+
+@keyframes flyingIcon {
+  0% {
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+  }
+  50% {
+    top: -50px;
+    left: 50px;
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+  }
+}
+
+.weather-description {
+  font-size: 18px;
+}
+
+.temperature,
+.humidity,
+.wind-speed {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+@keyframes subtleBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  animation: subtleBackground 10s linear infinite; 
+}
